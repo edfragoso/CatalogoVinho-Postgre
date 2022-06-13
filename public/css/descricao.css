@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  background-color: #fa5ebe67;
+}
+
+nav {
+  z-index: 9999;
+  width: 100%;
+  background-color: #7a004b;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 0.6rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#inicio:hover {
+  text-decoration: solid;
+  color: #490a33;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+
+#vinhoTinto:hover {
+  text-decoration: solid;
+  color: #490a33;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+
+#vinhoBranco:hover {
+  text-decoration: solid;
+  color: #e2ba42;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+
+#cadastro:hover {
+  text-decoration: solid;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+
+main {
+  width: 100%;
+  align-items: center;
+}
+
+header img {
+  margin-top: .2rem;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 0rem;
+}
+
+section#cards {
+  text-align: center;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+section#cards div.card {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 5px #00000015;
+  padding: 1rem;
+  border-radius: 25px;
+  margin: 3rem 0rem 5rem 0;
+}
+
+section#cards h2 {
+  width: 100%;
+  text-align: center;
+}
+
+section#cards div.card img {
+  align-items: center;
+  width: 60%;
+}
+
+section#cards div.card h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  
+}
+
+section#cards div.card p.descricao {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+section#cards div.card a#editar {
+  width: 50%;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #fff;
+  border: solid 1px #7a004b;
+  color: #7a004b;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+section#cards div.card a#apagar {
+  width: 50%;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #fff;
+  border: solid 1px #ff0000;
+  color: #ff0000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+section#cards div.card a#editar:hover {
+  background-color: #7a004b;
+  color: #fff;
+}
+
+section#cards div.card a#apagar:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+/* Aqui é o efeito de escurecimento da pagina quando o modal é chamado */
+#modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  display: none; /* Deixa o modal oculto */
+  justify-content: center;
+  align-items: center;
+}
+
+#modal{
+  /* Exemplo básico de estilização */
+  background: rgb(28, 25, 25);
+  border: 2px solid white;
+  /* Tamanho do modal */
+  width: 70%;
+  height: 60%;
+  padding: 20px;
+  position: relative;
+}
+/* Estilização básica da mensagem */
+#msgText{
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.nao{
+  padding-top: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  font-size: 1.2em;
+  top: 200px;
+  right: 10%;
+  /* Largura e altura do botão */
+  width: 70px;
+  height: 30px;
+  /* Exemplo básico de estilização */
+  border-radius: 20px;
+  border: 4px solid white;
+  background: rgba(116, 114, 114, 0.904);
+  color: white;
+  cursor: pointer;
+}
+
+.nao:hover{
+  text-decoration: solid;
+  color: #490a33;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+
+.sim{
+  padding-top: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  font-size: 1.2em;
+  top: 200px;
+  left: 10%;
+  /* Largura e altura do botão */
+  width: 70px;
+  height: 30px;
+  /* Exemplo básico de estlização */
+  border-radius: 20px;
+  border: 4px solid white;
+  background: rgba(116, 114, 114, 0.904);
+  color: white;
+  cursor: pointer;
+}
+.sim:hover{
+  text-decoration: solid;
+  color: #490a33;
+  font-size: 2rem;
+  transition: all 0.8s ease-out;
+  transform: scale(1.06);
+  padding: 5px;
+}
+/* Botão fechar */
+#close {
+  /* Posição do botão */
+  position: absolute;
+  font-size: 1.2em;
+  top: -20px;
+  right: -15px;
+  /* Largura e altura do botão */
+  width: 50px;
+  height: 50px;
+  /* Exemplo básico de estlização */
+  border-radius: 50%;
+  border: 4px solid white;
+  background: rgba(226, 63, 63, 0.904);
+  color: white;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #7a004b;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}

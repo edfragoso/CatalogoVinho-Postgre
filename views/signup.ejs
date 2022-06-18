@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <%- include('./components/head') %>
+  </head>
+
+  <body>
+    <%- include('./components/nav') %>
+
+    <main>
+
+      <section id="cadastro">
+
+        <h2>Cadastre um novo Vinho!</h2>
+
+        <form action="/create" method="POST">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite o nome do Vinho:"
+            required
+          />
+
+          <label for="uva">Uva:</label>
+          <input
+            type="text"
+            id="uva"
+            name="uva"
+            placeholder="Digite o tipo de uva:"
+            required
+          />
+
+          <label for="tipo">Tipo:</label>
+          <input
+            type="text"
+            id="tipo"
+            name="tipo"
+            placeholder="Tinto ou Branco"
+            required
+          />
+
+          <label for="classificacao">Classificação:</label>
+          <input
+            type="text"
+            id="classificacao"
+            name="classificacao"
+            placeholder="Seco ou Suave"
+            required
+          />
+          
+          <label for="safra">Safra</label>
+          <input
+            type="text"
+            id="safra"
+            name="safra"
+            placeholder="Digite a Safra do Vinho:"
+            required
+          />
+
+          <label for="imagem">Link da Imagem</label>
+          <input
+            type="text"
+            id="imagem"
+            name="imagem"
+            placeholder="Cole aqui o link da imagem"
+            required
+          />
+
+          <button class="btn" type="submit">Cadastrar</button>
+        </form>
+        
+    </main>
+
+    
+<%- include('./components/footer') %>   
+  </body>
+</html>

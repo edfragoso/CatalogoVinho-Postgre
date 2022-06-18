@@ -14,7 +14,7 @@
         <li><a id="inicio" href="/">Inicio</a></li>
         <li><a id="vinhoTinto" href="/vinhosTintos">Vinhos Tinto</a></li>
         <li><a id="vinhoBranco" href="/vinhosBrancos">Vinhos Branco</a></li>
-        <li><a id="cadastro" href="/cadastro">Cadastrar Vinho</a></li>
+        <li><a id="cadastro" href="/signup">Cadastrar Vinho</a></li>
       </ul>
     </nav>
 
@@ -23,21 +23,16 @@
         <img src="./img/Banner-Vinho-Site.jpg" class="imgVinho" alt="Banner" />
       </header>
 
-      <% if(menssagem != "") { %>
-      <section id="menssagem">
-        <p><%= menssagem %></p>
-        <span id="close">&times;</span>
-      </section>
-      <% } %>
+     
       <div class="destaque">
         <h2 id="destaqueTinto">Destaques Tinto</h2>
       </div>
       <section id="cards">
-        <% vinhoTinto.forEach((vinhoT) => { %>
+        <% vinho.forEach((vinhoT) => { %>
 
         <div class="card">
-          <a href="/descricaoVT/<%= vinhoT.id %>"
-            ><img src="<%= vinhoT.img %>" alt="Imagem do vinho"
+          <a href="/description/<%= vinhoT.id %>"
+            ><img src="<%= vinhoT.imagem %>" alt="Imagem do vinho"
           /></a>
           <h3><%= vinhoT.nome %></h3>
           <p></p>
@@ -49,19 +44,6 @@
         <h2 id="destaqueBranco">Destaques Branco</h2>
       </div>
 
-      <section id="cards">
-        <% vinhoBranco.forEach((vinhoB) => { %>
-
-        <div class="card">
-          <a href="/descricaoVB/<%= vinhoB.id %>"
-            ><img src="<%= vinhoB.img %>" alt="Imagem do vinho"
-          /></a>
-          <h2><%= vinhoB.nome %></h2>
-          <p></p>
-        </div>
-
-        <% }) %>
-      </section>
     </main>
 
     <footer>

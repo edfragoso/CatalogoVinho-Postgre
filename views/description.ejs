@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/descricao.css" />
+    <title>Vinhos Tintos</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+       
+        <li><a id="inicio" href="/">Inicio</a></li>
+        <li><a id="vinhoBranco" href="/vinhosBrancos">Vinhos Branco</a></li>
+        <li><a id="cadastro" href="/cadastro">Cadastrar Vinho</a></li>
+      </ul>
+    </nav>
+
+    <section id="cards">
+      <div class="card">
+        <img src="<%= vinhoId.imagem %>" alt="vinho tinto" />
+
+        <h3><strong><%= vinhoId.nome %></strong></h3>
+
+        <p class="numero"><strong>Nº </strong><%= vinhoId.id %></p>
+        <p class="nome"><strong>Nome: </strong><%= vinhoId.nome %></p>
+        <p class="uva"><strong>Uva: </strong><%= vinhoId.uva %></p>
+        <p class="tipo"><strong>Tipo: </strong><%= vinhoId.tipo %></p>
+        <p class="safra"><strong>Classificação: </strong><%= vinhoId.classificacao %></p>
+        <p class="safra"><strong>Safra: </strong><%= vinhoId.safra %></p>
+
+        <a id="editar" href="/getById/<%= vinhoId.id %>/put">Editar</a>
+        <a id="apagar" href="/getById/<%= vinhoId.id %>/remove">Apagar</a>
+      </div>
+    </section>
+
+
+    <% if(vinhoIdPut != null) {%>
+      <%- include('./components/modalPut')%>
+    <% } %>
+
+    <% if(vinhoIdDel != null) {%>
+      <%- include('./components/modalDel')%>
+    <% } %>
+    
+    <footer>
+      <p>Ednilson Fragoso</p>
+      <p><a href="https://github.com/">GitHub</a></p>
+    </footer>
+    <script src="../js/scriptModal.js"></script>
+  </body>
+</html>

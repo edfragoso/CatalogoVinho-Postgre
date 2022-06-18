@@ -1,0 +1,47 @@
+
+<section class="modal2-overlay" id="overlay">
+  <div class="modal2" id="modal2">
+    <div class="modal2-header">
+      <h3>Atualizar Vinho</h3>
+      <a href="/" id="close-modal-put">X</a>
+    </div>
+    <div class="modal2-body">
+      <form class="form-modal" action="/update/<%= vinhoId.id %>" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<%= vinhoId.nome %>" />
+
+        <label for="uva">Uva:</label>
+        <input type="text" id="uva" name="uva" value="<%= vinhoId.uva %>" />
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" value="<%= vinhoId.tipo %>" />
+
+        <label for="classificacao">Classificação:</label>
+        <input
+          type="text"
+          id="classificacao"
+          name="classificacao"
+          value="<%= vinhoId.classificacao %>"
+        />
+
+        <label for="safra">Safra</label>
+        <input
+          type="text"
+          id="safra"
+          name="safra"
+          value="<%= vinhoId.safra %>"
+        />
+
+        <label for="imagem">Link da Imagem</label>
+        <input
+          type="text"
+          id="imagem"
+          name="imagem"
+          value="<%= vinhoId.imagem %>"
+        />
+
+        <button class="btn" type="submit">Atualizar</button>
+      </form>
+    </div>
+  </div>
+</section>
